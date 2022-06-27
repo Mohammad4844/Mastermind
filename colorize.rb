@@ -9,8 +9,8 @@ module Colorize
     6 => 106  # cyan
   }
 
-  # Adds a pre-coded background color to the number n, and adds a space before and after it.
+  # Adds a pre-coded background color to the number n, and adds 2 spaces before and after it.
   def self.bg_color(n)
-    "\e[#{@color_map[n]}m #{n} \e[0m"
+    "\e[#{@color_map[n]}m  #{n}  \e[0m "
   end
 end
