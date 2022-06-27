@@ -9,13 +9,13 @@ module Output
       
       \e[4m#{"\e[1m#{'How to play:'}\e[22m"}\e[24m
 
-      Mastermind is a 1-player game against a computer, where you are the code breaker. There are 6 different color/number combinations:
+      Mastermind is a 1-player game against a computer, where you can be either the code maker or the code breaker. There are 6 different color/number combinations:
 
     INSTRUCTIONS
     print_code(Code.new(123456))
     puts <<~INSTRUCTIONS
       \n
-      The computer will choose 4 of them to make a master code, for example:
+      The code maker will choose 4 of them to make a master code, for example:
 
     INSTRUCTIONS
     print_code(temp)
@@ -36,8 +36,10 @@ module Output
     puts <<~INSTRUCTIONS
       \e[4m#{"\e[1m#{'Time to play!'}\e[22m"}\e[24m
 
-      Duplicate values in he code are allowed. To win, you have to guess the code \e[31m#{'within 12 turns'}\e[0m. 
-      Press \e[34m#{'Enter'}\e[0m to start playing.
+      Duplicate values in the code are allowed. To win, you have to guess the code \e[31m#{'within 12 turns'}\e[0m. 
+        
+      Enter 1 if you want to be \e[34m#{'Code Maker'}\e[0m
+      Enter 2 if you want to be \e[34m#{'Code Breaker'}\e[0m
     INSTRUCTIONS
   end
 
