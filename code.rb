@@ -13,8 +13,8 @@ class Code
     results = Array.new(4, 'INCORRECT') # MATCH, LOCATION, INCORRECT
     unmatched_numbers = []
     code.digits.each_with_index do |digit, i| 
-      if digit == self.digits[i] 
-        results[i] = 'MATCH' 
+      if digit == self.digits[i]
+        results[i] = 'MATCH'
       else
         unmatched_numbers.push(self.digits[i])
       end

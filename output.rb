@@ -1,12 +1,12 @@
-require_relative 'code'
-
+# Module containing useful methods to output instructions, codes with their respective colors, and colored clue keys to
+# the standard output
 module Output
   require_relative 'colorize'
 
   def self.print_instructions
     temp = Code.new(4126)
     puts <<~INSTRUCTIONS
-      
+
       \e[4m#{"\e[1m#{'How to play:'}\e[22m"}\e[24m
 
       Mastermind is a 1-player game against a computer, where you can be either the code maker or the code breaker. There are 6 different color/number combinations:
@@ -47,7 +47,7 @@ module Output
     print "\n"
     print_code(code)
     print_clues(array_of_comparisons) 
-    print "\e[32m#{" Turns left: #{turns_left}"}\e[0m" unless turns_left == 0    
+    print "\e[32m#{" Turns left: #{turns_left}"}\e[0m" unless turns_left == 0
     print "\n\n"
   end
 
@@ -60,5 +60,4 @@ module Output
     array_of_comparisons.each { |comparison| print "\e[31m#{"\u2666"}\e[0m " if comparison == 'MATCH' }
     array_of_comparisons.each { |comparison| print "\e[37m#{"\u2666"}\e[0m " if comparison == 'LOCATION' }
   end
-
 end

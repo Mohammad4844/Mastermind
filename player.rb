@@ -1,3 +1,4 @@
+# Class Player representing the player of the mastermind game along with their current role
 class Player
   attr_reader :role
 

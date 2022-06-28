@@ -1,3 +1,7 @@
+# A computer algorithm used to break the code in mastermind. The algorithm used is an incomplete version of the algorithm 
+# by Donald Knuth to solve mastermind. Although, this doesnt guarentee breaking the code within 5 turns like the original
+# algorithm, it usually does end up breaking the code in around the same turns.
+
 class ComputerBreaker
   require_relative 'code'
 
